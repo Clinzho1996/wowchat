@@ -19,17 +19,18 @@
 }
 
 .ce-chats-container {
-  background-color: rgba(240, 240, 240, 0.575) !important;
+  background-color: #02112e;
 }
 
 .ce-active-chat-card {
-  background-color: #cabcdc !important;
-  border: 4px solid #cabcdc !important;
+  background-color: #02112e !important;
+  border: 2px solid #ef9210 !important;
   border-radius: 0px !important;
+  color: #fff;
 }
 
 .ce-chat-subtitle-text {
-  color: #595959 !important;
+  color: #8f8b8b !important;
 }
 
 .ce-chat-form-container {
@@ -43,7 +44,7 @@
 
 .ce-primary-button {
   border-radius: 6px !important;
-  background-color: #ef9210 !important;
+  background-color: #02112e !important;
   position: relative;
   bottom: 1px;
 }
@@ -89,7 +90,8 @@
   width: 100%;
   padding: 18px;
   text-align: center;
-  background-color: #3b2a50;
+  background-color: #02112e;
+  margin-bottom: 20px;
 }
 
 .chat-title {
@@ -173,7 +175,7 @@
 .message-form {
   overflow: hidden;
   border-radius: 6px;
-  border: 1px solid #ef9210;
+  border: 1px solid #02112e;
   background-color: white;
 }
 
@@ -194,7 +196,7 @@
 }
 
 .send-button {
-  background-color: rgb(239, 146, 16);
+  background-color: #02112e;
   border: 1px solid white;
   padding: 5px;
   cursor: pointer;
@@ -228,31 +230,23 @@
 .wrapper {
   height: 100vh;
   width: 100%;
-  background: rgb(239, 146, 16);
-  background: linear-gradient(
-    90deg,
-    rgb(239, 146, 16) 7%,
-    rgb(239, 146, 16) 17%,
-    rgb(211, 128, 12) 29%,
-    rgba(239, 146, 16, 0.89) 44%,
-    rgba(87, 116, 184, 1) 66%,
-    rgba(70, 135, 198, 1) 83%,
-    rgba(44, 163, 219, 1) 96%,
-    rgba(22, 188, 237, 1) 100%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: #02112e;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #010013, #003770);
 }
 
 .input {
-  color: #333;
+  color: #fff;
   font-size: 1.2rem;
+  font-weight: 600;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 13px;
   border-radius: 0.2rem;
-  background-color: rgb(255, 255, 255);
+  background-color: #233b59;
   border: none;
   width: 90%;
   display: block;
@@ -260,10 +254,39 @@
   transition: all 0.3s;
   outline: none;
   margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+::placeholder {
+  color: #fff;
 }
 
 .form {
-  width: 400px;
+  width: 45%;
+  padding: 50px;
+  margin-right: 100px;
+  background-color: #0f233e;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+label {
+  padding-left: 30px;
+  color: #8f8b8b;
+  font-weight: 500;
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.subtitle {
+  color: #8f8b8b;
+  padding: 10px 50px;
+  font-weight: 500;
 }
 
 .title {
@@ -274,15 +297,25 @@
   font-size: 2.3em;
 }
 
+.forgot {
+  text-decoration: none;
+  color: #8f8b8b;
+  float: right;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
 .button {
   border-radius: 4px;
   border: none;
-  background-color: white;
-  color: black;
+  background-color: #f8931d;
+  color: #02112e;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 22px;
-  padding: 20px;
+  font-weight: 600;
+  padding: 15px;
   width: 200px;
   transition: all 0.4s;
   cursor: pointer;

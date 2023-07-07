@@ -36,17 +36,33 @@ const Modal = () => {
 
   return (
     <div className="wrapper">
-      <div className="form">
-        <h1 className="title">{APP_NAME}</h1>
+      <div className="left">
+        <img
+          src={require("../assets/Opinion-bro.png")}
+          alt="bro"
+          width="750px"
+        />
+      </div>
+      <div className="form right">
+        <div className="header">
+          <img src={require("../assets/wow.png")} alt="logo" width="100px" />
+          {/* <h1 className="title">{APP_NAME}</h1> */}
+          <p className="subtitle">
+            Sign in with your login details to communicate with your colleagues
+            and enjoy a seemless workflow
+          </p>
+        </div>
         <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Username</label>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="input"
-            placeholder="Username"
+            placeholder="Username / company email"
             required
           />
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             value={password}
@@ -55,6 +71,9 @@ const Modal = () => {
             placeholder="Password"
             required
           />
+          <a href="#" className="forgot">
+            Forgot Password ?
+          </a>
           <div align="center">
             <button type="submit" className="button">
               <span>Start chatting</span>
