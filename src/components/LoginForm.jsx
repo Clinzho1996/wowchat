@@ -59,7 +59,7 @@ const Modal = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="input"
-            placeholder="Username / company email"
+            placeholder="Enter Username"
             required
           />
           <label htmlFor="password">Password</label>
@@ -68,7 +68,7 @@ const Modal = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="input"
-            placeholder="Password"
+            placeholder="Enter Password"
             required
           />
           <a href="#" className="forgot">

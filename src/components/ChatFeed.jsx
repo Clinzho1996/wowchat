@@ -1,3 +1,4 @@
+import React from "react";
 import MyMessage from "./MyMessage";
 import TheirMessage from "./TheirMessage";
 import MessageForm from "./MessageForm";
@@ -22,6 +23,26 @@ const ChatFeed = (props) => {
           />
         )
     );
+
+  const renderTypingIndicator = () => {
+    const typingPersons = chat?.people.filter(
+      (person) => person.person.username !== userName && person.typing === true
+    );
+
+    if (typingPersons.length > 0) {
+      return (
+        <div className="typing-indicator">
+          {typingPersons.map((person) => (
+            <div key={person.person.username} className="typing-text">
+              {person.person.username} is typing...
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    return null;
+  };
 
   const renderMessages = () => {
     const keys = Object.keys(messages);
@@ -67,6 +88,7 @@ const ChatFeed = (props) => {
           {chat.people.map((person) => ` ${person.person.username}`)}
         </div>
       </div>
+      {renderTypingIndicator()}
       {renderMessages()}
       <div style={{ height: "100px" }} />
       <div className="message-form-container">
