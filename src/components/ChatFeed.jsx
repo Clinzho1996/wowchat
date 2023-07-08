@@ -6,7 +6,6 @@ import "../App.css";
 
 const ChatFeed = (props) => {
   const { chats, activeChat, userName, messages, typing } = props;
-
   const chat = chats && chats[activeChat];
 
   const formatAMPM = (date) => {
@@ -16,7 +15,7 @@ const ChatFeed = (props) => {
 
   const renderReadReceipts = (message, isMyMessage) => {
     const chatPeople = chat.people;
-    const currentUserId = props.userName;
+    const currentUserId = userName;
 
     return chatPeople.map((person, index) => {
       const isCurrentUser = person.person.username === currentUserId;
@@ -108,7 +107,7 @@ const ChatFeed = (props) => {
   return (
     <div className="chat-feed">
       <div className="chat-title-container">
-        <div className="chat-title">{chat?.title}</div>
+        <div className="chat-title">{chat.title}</div>
         <div className="chat-subtitle">
           {chat.people.map((person) => ` ${person.person.username}`)}
         </div>

@@ -385,6 +385,25 @@ label {
   right: 0;
 }
 
+.logout-button {
+  margin-top: 30px;
+  align-items: center;
+  background-color: #ef9210;
+  padding: 15px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.logout-button:hover {
+  background-color: #02112e;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1268px) {
   .left img {
     width: 400px;
@@ -404,6 +423,9 @@ label {
   }
   .message-input {
     width: 78%;
+  }
+  .message-form-container {
+    width: 100%;
   }
 }
 
@@ -425,10 +447,11 @@ label {
     padding: 20px;
   }
   .message-input {
-    width: 72%;
+    width: 65%;
   }
 
-  .message-form-container{
+  .message-form-container {
     width: 100%;
+    overflow-y: hidden;
   }
 }
