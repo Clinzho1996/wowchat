@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import axios from "axios";
 
@@ -48,8 +49,8 @@ const Modal = () => {
           <img src={require("../assets/wow.png")} alt="logo" width="100px" />
           {/* <h1 className="title">{APP_NAME}</h1> */}
           <p className="subtitle">
-            Sign in with your login details to communicate with your colleagues
-            and enjoy a seemless workflow
+            Please log in using your credentials to collaborate with your
+            colleagues and experience a smooth workflow.
           </p>
         </div>
         <form onSubmit={handleSubmit}>
