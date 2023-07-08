@@ -87,13 +87,13 @@
 }
 
 .chat-title-container {
-  width: 50%;
+  width: 100%;
   padding: 18px;
   text-align: center;
   background-color: #02112e;
   margin-bottom: 20px;
-  position: fixed;
   z-index: 100;
+  top: 0;
 }
 
 .chat-title {
@@ -169,7 +169,7 @@
   width: 13px;
   height: 13px;
   border-radius: 13px;
-  margin: 1.5px;
+  margin: 3px 2px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px;
