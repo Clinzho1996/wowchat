@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 
 const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
-const APP_NAME = process.env.REACT_APP_APP_NAME;
 console.log(PROJECT_ID);
 
 const Modal = () => {

@@ -47,6 +47,7 @@ const MessageForm = (props) => {
         multiple={false}
         id="upload-button"
         style={{ display: "none" }}
+        accept=".png, .jpg, .jpeg, .gif, .pdf"
         onChange={handleUpload.bind(this)}
       />
       <button type="submit" className="send-button">
