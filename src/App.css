@@ -384,3 +384,51 @@ label {
   opacity: 1;
   right: 0;
 }
+
+@media screen and (max-width: 1268px) {
+  .left img {
+    width: 400px;
+  }
+  .right p {
+    padding: 0px;
+    font-size: 14px;
+  }
+  .right label {
+    padding-left: 20px;
+  }
+  ::placeholder {
+    font-size: 14px;
+  }
+  .right button {
+    font-size: 18px;
+  }
+  .message-input {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 698px) {
+  .wrapper {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 0px;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+    margin: 20px;
+    margin-top: 0px;
+    padding: 20px;
+  }
+  .message-input {
+    width: 72%;
+  }
+
+  .message-form-container{
+    width: 100%;
+  }
+}
