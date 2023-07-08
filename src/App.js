@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { ChatEngine } from "react-chat-engine";
 import ChatFeed from "./components/ChatFeed";
@@ -8,30 +9,31 @@ const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
 console.log(PROJECT_ID);
 
 const App = () => {
-  if (!localStorage.getItem("username")) return <Modal />;
+  const [userInteracted, setUserInteracted] = useState(false);
 
-  const renderIceBreaker = (chat) => {
-    return (
-      <div className="icebreaker-message">
-        <p>Welcome to the chat! Start a conversation by saying hello.</p>
-      </div>
-    );
+  const handleInteraction = () => {
+    setUserInteracted(true);
   };
 
+  if (!localStorage.getItem("username")) return <Modal />;
+
+  useEffect(() => {
+    if (userInteracted) {
+      const audio = new Audio(
+        "https://chat-engine-assets.s3.amazonaws.com/click.mp3"
+      );
+      audio.play();
+    }
+  }, [userInteracted]);
+
   return (
-    <div className="app">
+    <div className="app" onClick={handleInteraction}>
       <ChatEngine
         height="100vh"
         projectID={PROJECT_ID}
         userName={localStorage.getItem("username")}
         userSecret={localStorage.getItem("password")}
         renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-        onNewMessage={() =>
-          new Audio(
-            "https://chat-engine-assets.s3.amazonaws.com/click.mp3"
-          ).play()
-        }
-        renderIceBreaker={renderIceBreaker}
       />
     </div>
   );

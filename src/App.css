@@ -137,6 +137,15 @@
   max-width: 60%;
 }
 
+.left img {
+  width: 650px;
+}
+
+.error {
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
 .message-image {
   margin-right: 18px;
   object-fit: cover;

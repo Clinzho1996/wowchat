@@ -38,11 +38,7 @@ const Modal = () => {
   return (
     <div className="wrapper">
       <div className="left">
-        <img
-          src={require("../assets/Opinion-bro.png")}
-          alt="bro"
-          width="750px"
-        />
+        <img src={require("../assets/Opinion-bro.png")} alt="bro" />
       </div>
       <div className="form right">
         <div className="header">
@@ -81,7 +77,7 @@ const Modal = () => {
             </button>
           </div>
         </form>
-        <h1>{error}</h1>
+        <h1 className="error">{error}</h1>
       </div>
     </div>
   );

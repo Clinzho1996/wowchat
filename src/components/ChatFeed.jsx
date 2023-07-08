@@ -4,7 +4,7 @@ import TheirMessage from "./TheirMessage";
 import MessageForm from "./MessageForm";
 
 const ChatFeed = (props) => {
-  const { chats, activeChat, userName, messages } = props;
+  const { chats, activeChat, userName, messages, typing } = props;
 
   const chat = chats && chats[activeChat];
 
@@ -25,14 +25,10 @@ const ChatFeed = (props) => {
     );
 
   const renderTypingIndicator = () => {
-    const typingPersons = chat?.people.filter(
-      (person) => person.person.username !== userName && person.typing === true
-    );
-
-    if (typingPersons.length > 0) {
+    if (typing) {
       return (
         <div className="typing-indicator">
-          {typingPersons.map((person) => (
+          {chat.people.map((person) => (
             <div key={person.person.username} className="typing-text">
               {person.person.username} is typing...
             </div>
@@ -40,7 +36,6 @@ const ChatFeed = (props) => {
         </div>
       );
     }
-
     return null;
   };
 
