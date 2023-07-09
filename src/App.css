@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+
+* {
+  font-family: Poppins !important;
+}
+
 /* CHAT STYLES */
 * {
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -14,18 +20,13 @@
   margin-top: 10px;
 }
 
-.ce-chat-list {
-  background-color: rgb(240, 240, 240) !important;
-}
-
 .ce-chats-container {
   background-color: #02112e;
 }
 
 .ce-active-chat-card {
   background-color: #02112e !important;
-  border: 2px solid #ef9210 !important;
-  border-radius: 0px !important;
+  border-radius: 3px !important;
   color: #fff;
 }
 
@@ -37,53 +38,12 @@
   padding-bottom: 20px !important;
 }
 
-.ce-text-input {
-  border-radius: 6px !important;
-  border: 1px solid #3b2a50 !important;
-}
-
-.ce-primary-button {
-  border-radius: 6px !important;
-  background-color: #02112e !important;
-  position: relative;
-  bottom: 1px;
-}
-
-.ce-danger-button {
-  background-color: white !important;
-  border-radius: 22px !important;
-}
-
-.ce-settings {
-  background-color: rgb(240, 240, 240) !important;
-}
-
-.ce-autocomplete-input {
-  border-radius: 6px !important;
-  border: 1px solid #3b2a50 !important;
-}
-
-.ce-autocomplete-options {
-  border-radius: 6px !important;
-  border: 1px solid #3b2a50 !important;
-  background-color: white !important;
-}
-
-.ce-chat-settings-container {
-  padding-top: 12px !important;
-}
-
-.ce-chat-avatars-row {
-  display: none !important;
-}
-
 /* CUSTOM FEED */
 
 .chat-feed {
   height: 100%;
   width: 100%;
   overflow: scroll;
-  background-color: rgb(240, 240, 240);
 }
 
 .chat-title-container {
@@ -94,6 +54,14 @@
   margin-bottom: 20px;
   z-index: 100;
   top: 0;
+}
+
+.ce-my-message-bubble {
+  background-color: #726dfe !important;
+}
+
+.ce-my-message-sinding-bubble {
+  background-color: #938ffe !important;
 }
 
 .chat-title {
@@ -180,24 +148,26 @@
   bottom: 0px;
   width: 100%;
   padding: 18px;
-  background-color: rgb(240, 240, 240);
+  background-color: #4a5162 !important;
 }
 
 .message-form {
   overflow: hidden;
   border-radius: 6px;
   border: 1px solid #02112e;
-  background-color: white;
+  background-color: #4a5162 !important;
 }
 
 .message-input {
-  height: 40px;
-  width: 84%;
-  background-color: white;
-  border: 1px solid white;
-  padding: 0px 18px;
+  width: calc(100% - 140px) !important;
+  position: relative !important;
+  top: 4px !important;
+  border-width: 0px !important;
+  background-color: #4a5162 !important;
+  color: white !important;
+  padding: 15px;
   outline: none;
-  font-size: 14px;
+  box-shadow: none;
 }
 
 .image-button {
@@ -269,7 +239,7 @@
 }
 
 ::placeholder {
-  color: #fff;
+  outline: none;
 }
 
 .form {
@@ -309,12 +279,14 @@ label {
   padding-right: 20px;
   font-size: 10px;
   margin-bottom: 10px;
+  color: #8f8b8b;
 }
 
 .time-left {
   text-align: left;
   padding-left: 65px;
   font-size: 10px;
+  color: #8f8b8b;
 }
 
 .header {
@@ -400,7 +372,7 @@ label {
 }
 
 .logout-button:hover {
-  background-color: #02112e;
+  background-color: #c57c15;
   cursor: pointer;
 }
 
@@ -454,4 +426,81 @@ label {
     width: 100%;
     overflow-y: hidden;
   }
+}
+
+/* Chat List */
+.ce-wrapper {
+  background-color: #02112e !important;
+}
+
+.ce-chats-container {
+  background-color: #02112e !important;
+  border-radius: 0px !important;
+}
+
+.ce-chat-form-container {
+  background-color: #02112e !important;
+  color: white;
+}
+
+.ce-chat-card {
+  margin: 0px 6px !important;
+}
+
+.ce-chat-card-loading-bar {
+  background-color: #535a6d !important;
+}
+
+.ce-active-chat-card {
+  background-color: #ef9210 !important;
+}
+
+.ce-chat-title-text {
+  color: white !important;
+}
+
+.ce-chat-subtitle-text {
+  color: hsla(0, 0%, 100%, 0.568) !important;
+}
+
+.ce-chat-unread-dot {
+  background-color: white !important;
+}
+
+/* Chat Settings */
+
+.ce-settings {
+  background-color: #02112e !important;
+  border-radius: 0px !important;
+}
+
+.ce-chat-title-form .ce-text-input {
+  background-color: #02112e;
+  color: white;
+}
+
+.ce-section-title-container {
+  background-color: #02112e !important;
+  color: white;
+}
+
+#ce-options-drop-down {
+  background-color: #02112e !important;
+  color: white;
+}
+
+.ce-person-text {
+  color: hsla(0, 0%, 100%, 0.568) !important;
+}
+
+.ce-danger-button {
+  background-color: #02112e !important;
+  border: 1px solid #ef9210 !important;
+  color: #ef9210 !important;
+}
+
+.ce-autocomplete-close {
+  background-color: white !important;
+  border-radius: 0px !important;
+  color: #003770;
 }
